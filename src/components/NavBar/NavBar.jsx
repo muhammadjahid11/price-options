@@ -1,5 +1,5 @@
+import Link from "../Link/Link";
 const NavBar = () => {
-
     const routes = [
         { id: 1, path: "/", name: "Home" },
         { id: 2, path: "/about", name: "About" },
@@ -8,14 +8,11 @@ const NavBar = () => {
         { id: 5, path: "/profile", name: "Profile" }
       ];
       
-
-
     return (
         <nav>
-          <ul>
+          <ul className="md:flex ">
           {
-                routes.map(route => <li key={route.id}>
-                    <a href={'route.path'}>{route.name}</a></li>)
+                routes.map(route => <Link key={route.id} route={route}></Link>)
             }
             </ul>  
         </nav>
